@@ -28,7 +28,7 @@ function change1() {
             processData(parsed, inner);
         }
     };
-    
+
     data1.open("GET", `https://liljaob.github.io/rwat-lab4/${d1Location}`, false);
     data1.send();
 
@@ -75,9 +75,10 @@ function change2() {
             var refObj = this.responseText;
             var parsed = JSON.parse(refObj);
             d1Location = parsed["data_location"];
+            console.log(d1Location);
         }
     };
-    ref.open("GET", "../data/reference.json", true);
+    ref.open("GET", "https://liljaob.github.io/rwat-lab4/reference.json", true);
     ref.send();
 
     data1.onreadystatechange = function() {
@@ -89,7 +90,7 @@ function change2() {
             processData(parsed, inner);
         }
     };
-    data1.open("GET", `../data/${d1Location}`, true);
+    data1.open("GET", `https://liljaob.github.io/rwat-lab4/${d1Location}`, true);
     data1.send();
 
     data2.onreadystatechange = function() {
@@ -100,7 +101,7 @@ function change2() {
             processData(parsed, inner);
         }
     };
-    data2.open("GET", `../data/${d2Location}`, false);
+    data2.open("GET", `https://liljaob.github.io/rwat-lab4/${d2Location}`, false);
     data2.send();
 
     data3.onreadystatechange = function() {
@@ -111,7 +112,7 @@ function change2() {
             processData(parsed, inner);
         }
     };
-    data3.open("GET", '../data/data3.json', true);
+    data3.open("GET", 'https://liljaob.github.io/rwat-lab4/data3.json', true);
     data3.send();
 
     function processData(parsed, inner) {
