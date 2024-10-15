@@ -65,6 +65,7 @@ function change1() {
 }
 
 function change2() {
+    console.log("test);
     // ASYNCHRONOUS IMPLEMENTATION
     var ref = new XMLHttpRequest();
     var data1 = new XMLHttpRequest();
