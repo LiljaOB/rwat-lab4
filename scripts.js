@@ -65,7 +65,6 @@ function change1() {
 }
 
 function change2() {
-    console.log("test");
     // ASYNCHRONOUS IMPLEMENTATION
     var ref = new XMLHttpRequest();
     var data1 = new XMLHttpRequest();
@@ -204,49 +203,3 @@ function change3() {
         document.getElementById(inner).innerHTML = display;
     }
 }
-
-    //header("Access-Control-Allow-Origin: *");
-
-    /* function myPromise2(location) {
-        return new Promise(function(myResolve2, myReject2) {
-            fetch('https://liljaob.github.io/rwat-lab4/'+ location)
-            .then((res) => {
-                if(!res.ok) {
-                    throw new Error (`HTTP ERROR`);
-                }
-                return res.json();
-            })
-            .then((dataObj) => {
-                
-                const location = data['data_location'];
-                console.log(location);
-                processData2(dataObj, 'fetchD1');
-                return myPromise3(location);
-            })
-            .then((location) => {
-                myResolve2(location);
-            })
-            .catch((error) => myReject2(`JSON document could not be opened: ${error.message}`));
-        });
-    } */
-
-    /* myPromise2.then(
-        function(location){console.log(location);},
-        function(dataObj){
-            console.log(dataObj);
-            processData2(dataObj, 'fetchD1');
-        }
-    );   */
-
-   /*  fetch('https://liljaob.github.io/rwat-lab4/reference.json')
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error('Network Error ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then((data) => {
-        const key = Object.keys(data);
-        const location = data[key];
-    })
-    .catch((error) => console.error('Error getting JSON document', error)); */
